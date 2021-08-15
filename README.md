@@ -3,13 +3,15 @@
 ### Date created
 2021-08-15
 ### Project Title
-Replace the Project Title
-Udacity Bikeshare Python Data Project 
+Udacity Bikeshare Python Data Project
 ### Description
-Describe what your project is about and what it does
+This is a Python project to display data based on what user wants to see.
+Data is from Bikeshare based on 3 different cities.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
