@@ -117,7 +117,7 @@ def load_data(city, month, day):
     DAYS = ['No days', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
     if day in DAYS:
-        df = df[df['day_of_week'] == day]
+        df = df[df['week_day'] == day]
     else:
         pass
 
@@ -291,7 +291,7 @@ def user_stats(df):
         gender_count = df['Gender'].value_counts()
         print(gender_count)
     else:
-        print('\nNo gender data available.')
+        print('\nNo gender data available for this city.')
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:
@@ -303,7 +303,7 @@ def user_stats(df):
         common_age = int(common_age)
         print('\nThe oldest user has a birth year of {}.\nThe youngest user has a birth year of {}.\nAnd the most common birth year is {}.'.format(oldest,youngest,common_age))
     else:
-        print('\nNo birth year data available.')
+        print('\nNo birth year data available for this city.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
