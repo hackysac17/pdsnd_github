@@ -103,7 +103,7 @@ def load_data(city, month, day):
     df = CITY_DATA[city]
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
-    df['week_day'] = df['Start Time'].dt.day_name
+    df['day_of_week'] = df['Start Time'].dt.day_name
 
     MONTHS = ['No Month', 'January', 'February', 'March', 'April', 'May', 'June']
 
@@ -116,13 +116,12 @@ def load_data(city, month, day):
     DAYS = ['No days', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
     if day in DAYS:
-        df = df[df['week_day'] == day]
+        df = df[df['day_of_week'] == day]
     else:
         pass
 
 
     return df
-
 
 cdf = load_data(info[0], info[1], info[2])
 
