@@ -105,7 +105,6 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.day_name
 
-
     MONTHS = ['No Month', 'January', 'February', 'March', 'April', 'May', 'June']
 
     if month in MONTHS:
@@ -123,7 +122,6 @@ def load_data(city, month, day):
 
 
     return df
-
 
 cdf = load_data(info[0], info[1], info[2])
 
@@ -304,6 +302,7 @@ def user_stats(df):
         print('\nThe oldest user has a birth year of {}.\nThe youngest user has a birth year of {}.\nAnd the most common birth year is {}.'.format(oldest,youngest,common_age))
     else:
         print('\nNo birth year data available for this city.')
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
